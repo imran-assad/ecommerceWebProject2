@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../assets/frontend_assets/assets";
 import { NavLink, Link } from "react-router-dom";
-import { Home } from "../pages/Home";
+
 const Navbar = () => {
   const [isVisible, setVisible] = useState(false);
   return (

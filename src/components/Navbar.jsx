@@ -6,7 +6,10 @@ const Navbar = () => {
   const [isVisible, setVisible] = useState(false);
   return (
     <div className=" py-5 flex items-center justify-between font-medium">
-      <img src={assets.logo} alt="" className="w-36" />
+      <Link to="/">
+        <img src={assets.logo} alt="" className="w-36" />
+      </Link>
+
       {/* menu bar code starts from here */}
       <ul className="hidden sm:flex gap-5 text-md text-gray-700">
         <NavLink to="/" className="flex flex-col gap-1  ">

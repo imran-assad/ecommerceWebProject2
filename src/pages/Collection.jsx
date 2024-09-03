@@ -14,7 +14,7 @@ const Collection = () => {
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
-      setCategory((prev) => prev.filter((item) => item == !e.target.value));
+      setCategory((prev) => prev.filter((item) => item !== e.target.value));
     } else {
       setCategory((prev) => [...prev, e.target.value]);
     }
@@ -42,9 +42,6 @@ const Collection = () => {
     }
     setFilterProducts(productsCopy);
   };
-  useEffect(() => {
-    setFilterProducts(products);
-  }, []);
 
   const sortProduct = () => {
     let filterCopy = filterProducts.slice();
@@ -60,6 +57,9 @@ const Collection = () => {
         break;
     }
   };
+  useEffect(() => {
+    setFilterProducts(products);
+  }, []);
   useEffect(() => {
     applyFilter();
   }, [category, subCategory]);
@@ -125,7 +125,7 @@ const Collection = () => {
               showFilter ? "" : "hidden"
             } sm:block`}
           >
-            <p className="mb-3 text-sm font-medium">CATEGORIES</p>
+            <p className="mb-3 text-sm font-medium">TYPES</p>
             <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
               <p className="flex gap-2">
                 <input

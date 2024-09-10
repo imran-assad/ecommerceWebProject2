@@ -3,10 +3,11 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import CartTotal from "../components/CartTotal";
+
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity, navigate } =
     useContext(ShopContext);
-
+  <img src={Logo} />;
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
